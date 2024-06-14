@@ -12,6 +12,8 @@ import {
     TypeIcon,
 } from 'lucide-react';
 
+
+
 interface ToolItemProps extends React.HTMLAttributes<HTMLButtonElement> {
     active: boolean;
 }
@@ -51,6 +53,7 @@ export function Toolbar({
     return (
         <div className="absolute bottom-4 w-full flex justify-center items-center pointer-events-none">
             <div className="flex gap-1 border p-1 rounded-md pointer-events-auto bg-white drop-shadow">
+                <MousePointer2Icon className="w-4 h-4" />
                 <ToolItem
                     title="Select"
                     active={activeHandler === 'Select'}
@@ -58,6 +61,7 @@ export function Toolbar({
                 >
                     <MousePointer2Icon className="w-4 h-4" />
                 </ToolItem>
+                <HandIcon className="w-4 h-4" />
                 <ToolItem
                     title="Hand"
                     active={activeHandler === 'Hand'}
@@ -66,6 +70,7 @@ export function Toolbar({
                     <HandIcon className="w-4 h-4" />
                 </ToolItem>
                 <Separator />
+                <SquareIcon className="w-4 h-4" />
                 <ToolItem
                     title="Rectangle"
                     active={activeHandler === 'Rectangle'}
@@ -73,6 +78,7 @@ export function Toolbar({
                 >
                     <SquareIcon className="w-4 h-4" />
                 </ToolItem>
+                <CircleIcon className="w-4 h-4" />
                 <ToolItem
                     title="Ellipse"
                     active={activeHandler === 'Ellipse'}
@@ -80,6 +86,7 @@ export function Toolbar({
                 >
                     <CircleIcon className="w-4 h-4" />
                 </ToolItem>
+                <TypeIcon className="w-4 h-4" />
                 <ToolItem
                     title="Text"
                     active={activeHandler === 'Text'}
@@ -87,6 +94,7 @@ export function Toolbar({
                 >
                     <TypeIcon className="w-4 h-4" />
                 </ToolItem>
+                <ImageIcon className="w-4 h-4" />
                 <ToolItem
                     title="Image"
                     active={activeHandler === 'Image'}
@@ -95,6 +103,7 @@ export function Toolbar({
                     <ImageIcon className="w-4 h-4" />
                 </ToolItem>
                 <Separator />
+                <SlashIcon className="w-4 h-4" />
                 <ToolItem
                     title="Line"
                     active={activeHandler === 'Line'}
@@ -102,6 +111,7 @@ export function Toolbar({
                 >
                     <SlashIcon className="w-4 h-4" />
                 </ToolItem>
+                <SplineIcon className="w-4 h-4" />
                 <ToolItem
                     title="Connector"
                     active={activeHandler === 'Connector'}
@@ -109,6 +119,7 @@ export function Toolbar({
                 >
                     <SplineIcon className="w-4 h-4" />
                 </ToolItem>
+                <PencilIcon className="w-4 h-4" />
                 <ToolItem
                     title="Freehand"
                     active={activeHandler === 'Freehand'}
@@ -116,6 +127,7 @@ export function Toolbar({
                 >
                     <PencilIcon className="w-4 h-4" />
                 </ToolItem>
+                <HighlighterIcon className="w-4 h-4" />
                 <ToolItem
                     title="Highlighter"
                     active={activeHandler === 'Highlighter'}

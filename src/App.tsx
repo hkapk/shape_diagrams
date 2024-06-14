@@ -3,7 +3,7 @@ import { DGMEditor } from '@dgmjs/react';
 import data from './data.json';
 import { useState } from 'react';
 import { Toolbar } from './toolbar';
-import { Palette } from './palette';
+
 
 declare global {
   interface Window {
@@ -53,7 +53,7 @@ function App() {
           window.editor.activateHandler(handler)
         }
       />
-      <Palette onPropsChange={handlePropsChange} />
+
     </>
   );
 }

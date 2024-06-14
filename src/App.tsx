@@ -1,4 +1,4 @@
-import { Editor, FillStyle, Shape, Text, type ShapeProps } from '@dgmjs/core';
+import { Editor, FillStyle, Shape, Text } from '@dgmjs/core';
 import { DGMEditor } from '@dgmjs/react';
 import data from './data.json';
 import { useState } from 'react';
@@ -34,9 +34,9 @@ function App() {
     shape.roughness = 1;
   };
 
-  const handlePropsChange = (props: ShapeProps) => {
-    window.editor.actions.update(props);
-  };
+  // const handlePropsChange = (props: ShapeProps) => {
+  //   window.editor.actions.update(props);
+  // };
 
   return (
     <>

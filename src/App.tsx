@@ -56,7 +56,7 @@ function App() {
           window.editor.activateHandler(handler)
         }
       />
-      <div><Palette></Palette></div>
+      <div><Palette onPropsChange={handlePropsChange} ></Palette></div>
     </div>
     </>
   );

@@ -1,8 +1,9 @@
-import { Editor, FillStyle, Shape, Text } from '@dgmjs/core';
+import { Editor, FillStyle, Shape, Text, type ShapeProps } from '@dgmjs/core';
 import { DGMEditor } from '@dgmjs/react';
 import data from './data.json';
 import { useState } from 'react';
 import { Toolbar } from './toolbar';
+import { Palette } from './palette';
 
 
 declare global {
@@ -34,18 +35,20 @@ function App() {
     shape.roughness = 1;
   };
 
-  // const handlePropsChange = (props: ShapeProps) => {
-  //   window.editor.actions.update(props);
-  // };
+  const handlePropsChange = (props: ShapeProps) => {
+    window.editor.actions.update(props);
+  };
 
   return (
-    <>
-      <DGMEditor
-        className="absolute inset-0 border rounded-lg"
-        onMount={handleMount}
-        onShapeInitialize={handleShapeInitialize}
-        onActiveHandlerChange={(handler) => setActiveHandler(handler)}
-      />
+    <><div>
+      <div>
+        <DGMEditor
+          className="absolute inset-0 border rounded-lg"
+          onMount={handleMount}
+          onShapeInitialize={handleShapeInitialize}
+          onActiveHandlerChange={(handler) => setActiveHandler(handler)}
+        />
+      </div>
       <Toolbar
         editor={editor}
         activeHandler={activeHandler}
@@ -53,7 +56,8 @@ function App() {
           window.editor.activateHandler(handler)
         }
       />
-
+      <div><Palette></Palette></div>
+    </div>
     </>
   );
 }
